@@ -6,7 +6,7 @@
         "@styles/*": ["src/styles/*"],
         "@hooks/*": ["src/hooks/*"],
         "@services/*": ["src/services/*"],
-        "@layout/*": ["src/layout/*"],
+        "@layouts/*": ["src/layouts/*"],
         "@schemas/*": ["src/schemas/*"],
         "@validators/*": ["src/validators/*"]
     }

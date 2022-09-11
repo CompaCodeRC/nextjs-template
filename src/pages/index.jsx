@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Modal } from "@components/Elements/Modals";
+import BaseLayout from "@layouts/BaseLayout";
 
 export default function Index() {
     const [isOpen, setIsOpen] = useState(false);
@@ -15,3 +16,7 @@ export default function Index() {
         </div>
     )
 }
+
+Index.getLayout = function getLayout(page) {
+    return <BaseLayout>{page}</BaseLayout>;
+};
