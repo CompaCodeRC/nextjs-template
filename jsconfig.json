@@ -1,14 +1,17 @@
 {
     "compilerOptions": {
-    "baseUrl": ".",
-    "paths": {
-        "@components/*": ["src/components/*"],
-        "@styles/*": ["src/styles/*"],
-        "@hooks/*": ["src/hooks/*"],
-        "@services/*": ["src/services/*"],
-        "@layouts/*": ["src/layouts/*"],
-        "@schemas/*": ["src/schemas/*"],
-        "@validators/*": ["src/validators/*"]
-    }
+        "baseUrl": ".",
+        "paths": {
+            "@views/*": ["src/views/*"],
+            "@components/*": ["src/components/*"],
+            "@styles/*": ["src/styles/*"],
+            "@hooks/*": ["src/hooks/*"],
+            "@services/*": ["src/services/*"],
+            "@layouts/*": ["src/layouts/*"],
+            "@schemas/*": ["src/schemas/*"],
+            "@validators/*": ["src/validators/*"],
+            "@fonts/*": ["src/fonts/*"],
+            "@helpers/*": ["src/helpers/*"]
+        }
     }
 }

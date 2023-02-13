@@ -1,10 +1,12 @@
 import Head from "next/head"
 
 export default function BaseLayout({ children, title }) {
+    const title_format = process.env.NEXT_PUBLIC_TITLE + (title ? ' - ' + title : '');
+
     return (
         <>
             <Head>
-                <title>{process.env.NEXT_PUBLIC_TITLE}{title && ' - '+title}</title>
+                <title>{title_format}</title>
                 <meta name="description" content="Esto es una descripcion"/>
                 <meta name="keywords" content="Key, Word, Nextjs"/>
                 <meta name="og:title" property="og:title" content={`${process.env.NEXT_PUBLIC_TITLE}${title && ' - '+title}`} />
