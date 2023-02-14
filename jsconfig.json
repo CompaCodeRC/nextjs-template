@@ -11,7 +11,8 @@
             "@schemas/*": ["src/schemas/*"],
             "@validators/*": ["src/validators/*"],
             "@fonts/*": ["src/fonts/*"],
-            "@helpers/*": ["src/helpers/*"]
+            "@helpers/*": ["src/helpers/*"],
+            "@store/*": ["src/store/*"],
         }
     }
 }

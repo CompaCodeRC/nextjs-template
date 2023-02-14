@@ -1,8 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
-* {
-    font-family: 'Poppins', sans-serif;
-}
+@import '@styles/variables.scss';
+@import '@styles/fonts.scss';
 
 *, *:before, *:after {
     box-sizing: border-box;
@@ -11,7 +8,7 @@
 body {
     margin: 0;
     position: relative;
-    background-color: #EEF0F4;
+    background-color: map-get($colors, 'primary', 'main');
 }
 
 button {

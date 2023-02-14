@@ -1,3 +1,6 @@
+import { Provider } from 'react-redux';
+import { store } from '@store/index';
+
 import Head from 'next/head';
 import Modal from 'react-modal';
 
@@ -11,7 +14,9 @@ function App({ Component, pageProps }) {
         <Head>
             <meta name='viewport' content='initial-scale=1.0, width=device-width' />
         </Head>
-        <Component {...pageProps} />
+        <Provider store={store}>
+          <Component {...pageProps} />
+        </Provider>
       </>
   );
 }

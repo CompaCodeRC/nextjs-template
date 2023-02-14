@@ -1,0 +1,49 @@
+$colors: (
+    'primary': (
+        'main': #ffbe2e,
+        'light': #ffeecc,
+        'dark': #d89400,
+    ),
+    'secondary': (
+        'main': #8a8d93,
+        'light': #9c9fa4,
+        'dark': #4d5056,
+    ),
+    'info': (
+        'main': #38a0ff,
+        'light': #38a0ff,
+        'dark': #38a0ff,
+    ),
+    'success': (
+        'main': #56ca00,
+        'light': #6ad01f,
+        'dark': #378100,
+    ),
+    'warning': (
+        'main': #ffb400,
+        'light': #ffb547,
+        'dark': #a37300,
+    ),
+    'danger': (
+        'main': #ff4c51,
+        'light': #ff6166,
+        'dark': #a33134,
+    ),
+    'light': (
+        'main': #fff,
+        'light': #fff,
+        'dark': #fff,
+    ),
+    'dark': (
+        'main': #16110d,
+        'light': #16110d,
+        'dark': #16110d,
+    ),
+);
+
+$shadows : (
+    'text': 0px 3px 3px rgba(0,0,0,0.3),
+    'button': 2px 3px 0px rgb(0, 0, 0),
+    'active': 0 0 0.5rem 0 rgba(0, 0, 0, 0.6),
+    'focus': 0 0 0.5rem 0 rgba(0, 0, 0, 0.8),
+);
