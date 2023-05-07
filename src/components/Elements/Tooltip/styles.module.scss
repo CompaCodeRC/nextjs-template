@@ -1,0 +1,47 @@
+@import "@styles/variables";
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    margin-bottom: -3px;
+    
+    &.check {
+        border-bottom: 1px dotted black;
+        cursor: help;
+    }
+
+    .drop {
+        visibility: hidden;
+        position: absolute;
+        width: 160px;
+        font-size: 14px;
+        font-weight: 600;
+        z-index: 1;
+        top: 150%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: map-get($colors, "warning", "light");
+        color: map-get($colors, "dark", "main");
+        padding: 0.5rem;
+        border-radius: 0.25rem;
+        opacity: 0;
+        transition: opacity 0.3s;
+        text-align: center;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: -0.8rem;
+            left: 50%;
+            transform: translateX(-50%);
+            border-width: 0.5rem;
+            border-style: solid;
+            border-color: transparent transparent map-get($colors, "warning", "light") transparent;
+        }
+    }
+
+    &:hover .drop {
+        visibility: visible;
+        opacity: 1;
+    }
+}

@@ -1,0 +1,6 @@
+{
+    "prices": {
+        "url": "/general/prices",
+        "method": "GET"
+    }
+}

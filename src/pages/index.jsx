@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 
-import { Modal } from "@components/Elements/Modals";
+import Modal from "@components/Elements/Modal";
 import BaseLayout from "@layouts/BaseLayout";
 import { increment } from "@store/features/demo/demoSlice";
 

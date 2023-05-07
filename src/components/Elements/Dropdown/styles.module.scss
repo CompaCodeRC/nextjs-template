@@ -1,0 +1,80 @@
+@import '@styles/variables';
+
+.dropdown {
+    position: relative;
+    width: inherit;
+
+    .title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        cursor: pointer;
+        font-weight: 600;
+
+        .arrow {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+            &.active svg {
+                transition: transform 0.3s ease;
+                transform: rotate(180deg);
+            }
+
+            &.desactive svg {
+                transition: transform 0.3s ease;
+                transform: rotate(0deg);
+            }
+        }
+    }
+
+    .content {
+        position: absolute;
+        top: 150%;
+        right: 0;
+        display: none;
+        background-color: map-get($colors, 'light', 'main');
+        padding: 1rem 0;
+        border-radius: 0.5rem;
+        z-index: 20;
+        color: map-get($colors, 'primary', 'light');
+        font-weight: 600;
+        box-shadow: map-get($shadows, 'text');
+        
+        &.active {
+            display: block;
+            animation: dropdown_show 0.3s ease-in-out;
+        }
+    
+        &.desactive {
+            display: block;
+            animation: dropdown_hide 0.3s ease-in-out;
+            animation-fill-mode: forwards;
+        }
+    }
+}
+
+@keyframes dropdown_show {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes dropdown_hide {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+}

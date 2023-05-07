@@ -1,8 +1,25 @@
-import Head from "next/head"
+import Head from 'next/head';
+import { getCookie } from 'cookies-next';
+import { useRouter } from 'next/router';
+import { useEffect, useState } from 'react';
 
-export default function BaseLayout({ children, title }) {
+import styles from './styles.module.scss';
+
+export default function AuthLayout({ children, title }) {
+    const router = useRouter();
+    const token = getCookie('token');
+    const [isLogged, setIsLogged] = useState(false);
     const title_format = process.env.NEXT_PUBLIC_TITLE + (title ? ' - ' + title : '');
 
+    useEffect(() => {
+        if (token) {
+            router.push('/dashboard');
+        } else {
+            setIsLogged(true);
+        }
+    }, []);
+
+    if (!isLogged) return null;
     return (
         <>
             <Head>

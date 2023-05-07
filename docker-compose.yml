@@ -1,0 +1,9 @@
+version: "2.13"
+services:
+  app:
+    build: .
+    ports:
+      - "3014:3000"
+    volumes:
+      - .:/home/app
+      - /home/app/node_modules

@@ -1,0 +1,103 @@
+@import '@styles/variables';
+
+.badge {
+    padding: 5px 10px;
+    background-color: map-get($colors, 'light', 'main');
+    border: none;
+    border-radius: 5px;
+    color: map-get($colors, 'primary', 'main');
+
+    &.success {
+        background-color: map-get($colors, 'success', 'main');
+        color: white;
+
+        &_outline {
+            background-color: transparent;
+            border: 1px solid map-get($colors, 'success', 'main');
+            color: map-get($colors, 'success', 'main');
+        }
+    }
+
+    &.danger {
+        background-color: #ff0000;
+        color: white;
+
+        &_outline {
+            background-color: transparent;
+            border: 1px solid #ff0000;
+            color: #ff0000;
+        }
+    }
+
+    &.warning {
+        background-color: #ff9900;
+        color: white;
+    }
+
+    &.info {
+        background-color: #0099cc;
+        color: white;
+    }
+
+    &.primary {
+        background-color: #0099cc;
+        color: white;
+    }
+
+    &.dark {
+        background-color: #0e0e0e;
+        color: white;
+
+        &_outline {
+            background-color: transparent;
+            border: 1px solid #0e0e0e;
+            color: #0e0e0e;
+        }
+    }
+
+    &.grey {
+        background-color: #d2dde9;
+        color: black;
+
+        &_outline {
+            background-color: transparent;
+            border: 1px solid #0e0e0e;
+            color: #0e0e0e;
+        }
+    }
+
+    &.sm {
+        padding: 0.3rem 0.4rem;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    &.md {
+        padding: 0.75rem 1.5rem;
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+
+    &.xl {
+        padding: 1.5rem 3rem;
+        font-size: 2.5rem;
+        font-weight: 800;
+    }
+}
+
+.spinner {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border: 3px solid rgba(255,255,255,.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s ease-in-out infinite;
+    -webkit-animation: spin 1s ease-in-out infinite;
+}
+@keyframes spin {
+    to { -webkit-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+    to { -webkit-transform: rotate(360deg); }
+}
