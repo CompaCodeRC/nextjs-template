@@ -3,7 +3,7 @@ services:
   app:
     build: .
     ports:
-      - "3014:3000"
+      - "3052:3000"
     volumes:
       - .:/home/app
       - /home/app/node_modules
