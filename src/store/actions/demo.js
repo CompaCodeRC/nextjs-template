@@ -3,17 +3,15 @@ import { createSlice } from "@reduxjs/toolkit";
 export const demo = createSlice({
     name: "demo",
     initialState: {
-        crypto: 'BTC',
-        currency: 'pen',
+        count: 0,
     },
     reducers: {
-        change: (state, action) => {
-            const { crypto, currency } = action.payload;
-            state.crypto = crypto;
-            state.currency = currency;
+        add_count: (state, action) => {
+            const count = action.payload;
+            state.count = state.count + count;
         }
     },
 });
 
-export const { setDemo } = demo.actions;
+export const { add_count } = demo.actions;
 export default demo.reducer;
