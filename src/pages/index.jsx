@@ -1,4 +1,4 @@
-import BaseLayout from "@layouts/BaseLayout";
+import BaseLayout from "@layouts/base_layout";
 import HomeView from "@views/home";
 
 export default function Index() {

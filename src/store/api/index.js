@@ -1,6 +1,7 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 import { getCookie } from "cookies-next";
-import { generalEndpoints } from './general';
+import general from './general';
+import auth from './auth';
 
 const apiSlice = createApi({
     reducerPath: 'api',
@@ -16,7 +17,8 @@ const apiSlice = createApi({
     }),
     tagTypes: ["Demos"],
     endpoints: (builder) => ({
-        ...generalEndpoints(builder)
+        ...general(builder),
+        ...auth(builder),
     }),
 });
 
@@ -24,6 +26,9 @@ export const {
     //General
     useGetCurrenciesQuery,
     useGetTickerQuery,
+
+    //Auth
+    useLoginMutation,
 } = apiSlice;
 
 export default apiSlice;

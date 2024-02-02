@@ -1,4 +1,4 @@
-export const generalEndpoints = (builder) => ({
+export default (builder) => ({
     getCurrencies: builder.query({
         query: () => "/general/currencies",
     }),

@@ -21,24 +21,24 @@
         th {
             font-size: 1rem;
             font-weight: 600;
+            color: #717171;
             
             .th {
                 display: flex;
                 align-items: center;
-                justify-content: space-between;
+                gap: 0.2rem;
             }
         }
 
         .sort {
-            font-weight: 400;
+            display: flex;
+            flex-direction: column;
             cursor: pointer;
-
-            span {
-                color: #717171;
-
-                &.active {
-                    color: black;
-                }
+            color: #717171;
+            font-size: 12px;
+            
+            svg {
+                margin: -2.5px 0;
             }
         }
     }

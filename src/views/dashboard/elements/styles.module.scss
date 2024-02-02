@@ -1,0 +1,29 @@
+@import "@styles/variables";
+
+.stats {
+    border: 1px solid map-get($colors, 'grey', 'dark');
+    border-radius: 0.5rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    .title {
+        color: map-get($colors, 'dark', 'main');
+        font-size: 1.2rem;
+        font-weight: 700;
+    }
+
+    .description {
+        color: map-get($colors, 'grey', 'main');
+        font-size: 0.9rem;
+        font-weight: 400;
+    }
+
+    .counter {
+        color: map-get($colors, 'dark', 'main');
+        font-size: 2rem;
+        font-weight: 700;
+        margin-top: 0.5rem;
+    }
+}

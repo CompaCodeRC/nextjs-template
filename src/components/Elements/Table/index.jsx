@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { FaAngleUp, FaAngleDown } from "react-icons/fa";
 import TablePDF from './TablePDF';
 
 import styles from './styles.module.scss';
@@ -47,8 +48,7 @@ export default function Table({ data, columns, download, total }) {
                                         <div className={styles.th}>
                                             <div>{column.Header}</div>
                                             {column.Header.length > 0 && <div className={styles.sort} onClick={() => sort(column.accessor)}>
-                                                <span>↑</span>
-                                                <span>↓</span>
+                                                <FaAngleUp /><FaAngleDown />
                                             </div>}
                                         </div>
                                     </th>

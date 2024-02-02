@@ -11,7 +11,7 @@ export default function Input({ label, id, note, type, ...restProps }) {
                 {note && <span>{note}</span>}
             </div>
             <div className={styles.input}>
-                <input id={id} name={id} key={restProps.value} type={showPassword ? 'text' : type} {...restProps}/>
+                <input id={id} name={id} type={showPassword ? 'text' : type} {...restProps}/>
                 {type === 'password' &&
                     <div className={styles.show_password}>
                         {showPassword ? <AiOutlineEyeInvisible onClick={() => setShowPassword(!showPassword)} /> : <AiOutlineEye onClick={() => setShowPassword(!showPassword)} />}
