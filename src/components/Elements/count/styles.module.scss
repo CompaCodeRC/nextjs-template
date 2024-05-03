@@ -1,0 +1,16 @@
+@import "@styles/variables";
+
+.count {
+    border: 1px solid map-get($colors, 'grey', 'main');
+    border-radius: 5px;
+    padding: 1rem;
+
+    .description {
+        color: map-get($colors, 'grey', 'main');
+        font-size: 1rem;
+    }
+
+    .counter {
+        font-size: 2rem;
+    }
+}
